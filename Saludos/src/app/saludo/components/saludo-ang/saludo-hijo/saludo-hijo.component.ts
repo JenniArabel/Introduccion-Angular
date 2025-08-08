@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { MayusculasPipe } from '../../pipe/mayusculas.pipe';
 
 @Component({
   selector: 'saludo-hijo',
   standalone: true,
-  imports: [],
+  imports: [ MayusculasPipe],
   templateUrl: './saludo-hijo.component.html',
   styleUrls: ['./saludo-hijo.component.css'],
 })

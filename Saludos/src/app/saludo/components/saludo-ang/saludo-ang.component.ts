@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import SaludoHijoComponent from './saludo-hijo/saludo-hijo.component';
+import { MayusculasPipe } from '../pipe/mayusculas.pipe';
 
 @Component({
   selector: 'saludo-ang',
   standalone: true,
-  imports: [ SaludoHijoComponent],
+  imports: [ SaludoHijoComponent, MayusculasPipe],
   templateUrl: './saludo-ang.component.html',
 })
 export default class SaludoAngComponent {
