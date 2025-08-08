@@ -9,6 +9,21 @@ import SaludoHijoComponent from './saludo-hijo/saludo-hijo.component';
 })
 export default class SaludoAngComponent {
   name: string = 'Jenni';
+  buttonText: string = 'Ocultar ';
 
   saludoDesdeHijo: boolean = true;
+
+  // ocultarSaludo() {
+  //   this.saludoDesdeHijo = false;
+  // }
+
+  ocultarSaludo() {
+    if (this.saludoDesdeHijo === true) {
+      this.saludoDesdeHijo = !this.saludoDesdeHijo;
+      this.buttonText = 'Mostrar';
+    } else {
+      this.saludoDesdeHijo = true;
+      this.buttonText = 'Ocultar';
+    }
+  }
 }
