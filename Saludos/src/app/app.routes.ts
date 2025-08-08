@@ -17,6 +17,11 @@ export const routes: Routes = [
 
   },
   {
+    path: 'despedida/:nombre',
+    loadComponent: () =>
+      import('./saludo/components/despedida/despedida.component'),
+  },
+  {
     path: '**',
     redirectTo: 'saludo',
   }

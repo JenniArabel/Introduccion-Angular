@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import SaludoHijoComponent from './saludo-hijo/saludo-hijo.component';
 import { MayusculasPipe } from '../pipe/mayusculas.pipe';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'saludo-ang',
@@ -14,6 +15,10 @@ export default class SaludoAngComponent {
 
   saludoDesdeHijo: boolean = true;
 
+  constructor(private router: Router) {
+    // Redirigir a despedida con un nombre por defecto
+  }
+
   // ocultarSaludo() {
   //   this.saludoDesdeHijo = false;
   // }
@@ -26,5 +31,9 @@ export default class SaludoAngComponent {
       this.saludoDesdeHijo = true;
       this.buttonText = 'Ocultar';
     }
+  }
+
+  despedirse() {
+    this.router.navigate(['/despedida', this.name]);
   }
 }
