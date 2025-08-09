@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'despedida',
@@ -10,7 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 export default class DespedidaComponent {
   nombre: string = '';
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,private router: Router) {
     this.nombre = this.route.snapshot.paramMap.get('nombre') || 'invitado';
+  }
+
+  volverAlSaludo() {
+    this.router.navigate(['/saludo']);
   }
 }
