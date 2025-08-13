@@ -10,7 +10,7 @@ export const routes: Routes = [
         path: 'hijo',
         loadComponent: () =>
           import(
-            './saludo/components/saludo-ang/saludo-hijo/saludo-hijo.component'
+            './saludo/components/saludo-hijo/saludo-hijo.component'
           ),
       },
     ],

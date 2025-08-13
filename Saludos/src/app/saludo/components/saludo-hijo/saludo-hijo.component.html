@@ -1,0 +1,10 @@
+<button (click)="cambiarColorClase('rojo')"> Rojo </button>
+<button (click)="cambiarColorClase('verde')"> Verde </button>
+
+<h1 [ngClass]="colorClase" >
+  @if (saludarDesdeHijo === true) {
+    Hola {{nombreHijo | mayusculas}}
+  }
+</h1>
+
+<!-- hacer con ngClass class.red -->

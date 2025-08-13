@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import SaludoHijoComponent from './saludo-hijo/saludo-hijo.component';
-import { MayusculasPipe } from '../pipe/mayusculas.pipe';
+import SaludoHijoComponent from '../saludo-hijo/saludo-hijo.component';
+import { MayusculasPipe } from '../../pipe/mayusculas.pipe';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'saludo-ang',
@@ -32,6 +33,7 @@ export default class SaludoAngComponent {
       this.buttonText = 'Ocultar';
     }
   }
+  // ngClass
 
   despedirse() {
     this.router.navigate(['/despedida', this.name]);

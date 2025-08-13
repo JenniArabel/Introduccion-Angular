@@ -10,3 +10,4 @@ export class MayusculasPipe implements PipeTransform {
   }
 
 }
+// Sacar pipe del folder components
